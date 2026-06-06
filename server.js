@@ -6,6 +6,10 @@
 
 'use strict';
 
+console.log('CWD:', process.cwd());
+console.log('Files:', require('fs').readdirSync('.'));
+console.log('Data dir:', require('fs').readdirSync('./data'));
+
 const express  = require('express');
 const cors     = require('cors');
 const helmet   = require('helmet');

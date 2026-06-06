@@ -5,7 +5,7 @@ nixPkgs = ["nodejs_20", "python3", "gcc", "gnumake"]
 cmds = ["npm ci"]
 
 [phases.build]
-cmds = []
+cmds = ["npm rebuild better-sqlite3"]
 
 [start]
 cmd = "node server.js"
