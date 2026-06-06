@@ -202,7 +202,7 @@ function syncTables(count) {
 const savedCount = db.prepare("SELECT value FROM restaurant WHERE key = 'tableCount'").get();
 syncTables(savedCount?.value ?? 16);
 
-module.exports = { db, syncTables };  
+module.exports = { db };  
 
 // ── Graceful shutdown ────────────────────────────────────────────────────
 process.on('exit', () => {
