@@ -53,7 +53,9 @@ router.put('/', (req, res, next) => {
     if ('tableCount' in body) {
       const count = parseInt(body.tableCount, 10);
       if (!isNaN(count) && count > 0) {
+        console.log('[syncTables] called with count:',count);
         tableSync = syncTables(count);
+        console.log('[syncTables] result:', tableSync);
         if (req.io) {
           req.io.emit('tables_updated', { tableCount: count, ...tableSync });
         }
