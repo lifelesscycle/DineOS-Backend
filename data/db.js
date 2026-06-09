@@ -154,7 +154,7 @@ const bootstrapSettings = db.transaction(() => {
     // Billing
     currency:      '₹',
     taxRate:       '5',
-    tableCount:    '16',
+    tableCount:    '9',
     serviceCharge: '0',
     // Feature flags (stored as the string 'true'/'false')
     qrOrdering:    'true',
